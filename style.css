@@ -293,24 +293,10 @@ h1 {
     line-height: 1.6;
 }
 
-/* Robot Showcase Section */
-.robot-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: transparent;
-}
-
-.robot-window-placeholder {
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16/9;
-    border: none;
-    border-radius: 4px;
-    position: relative;
-    box-shadow: none;
+/* Solutions Section */
+.solutions-section {
+    padding: 8rem 1.5rem;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, #000 100%);
 }
 
 /* Team Section */
