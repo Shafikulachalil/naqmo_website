@@ -1,40 +1,6 @@
-// Launch Date Config
-const launchDate = new Date("2026-03-01T00:00:00").getTime();
 
-// Countdown Timer
-const timer = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = launchDate - now;
 
-    if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "<h2>We have launched!</h2>";
-        return;
-    }
 
-    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-}, 1000);
-
-// Notify Form Handler
-document.getElementById('notify-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const email = this.querySelector('input[type="email"]').value;
-    const button = this.querySelector('button');
-    const originalText = button.innerText;
-
-    button.innerText = 'Subscribed!';
-    button.style.background = '#10b981';
-
-    setTimeout(() => {
-        alert(`Thanks! We'll notify ${email} when we launch.`);
-        this.reset();
-        button.innerText = originalText;
-        button.style.background = '';
-    }, 500);
-});
 
 // Scroll Animations (Intersection Observer for Scale/Fade)
 const revealElements = document.querySelectorAll('.reveal');
