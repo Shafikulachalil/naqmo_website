@@ -1,37 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
+    <title>Naqmo | The Future of Robotics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <div class="video-container">
-        <video autoplay muted loop playsinline>
+    <!-- Global Background Video for 3D Effect -->
+    <div class="global-video-container" id="bg-video">
+        <video autoplay muted loop playsinline poster="assets/poster.jpg">
             <source src="assets/teaser.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
     </div>
 
-    <main class="content">
-        <h1>We’re Building Something Impactful</h1>
-        <p>Innovation in motion. Launching soon.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NAQMO</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#robot">The Robot</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="countdown" id="countdown">
-            <div><span id="days">00</span>Days</div>
-            <div><span id="hours">00</span>Hours</div>
-            <div><span id="minutes">00</span>Minutes</div>
-            <div><span id="seconds">00</span>Seconds</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="content fade-in-up">
+            <div class="hero-text">
+                <h1>We’re Building <br> <span class="highlight">The Future</span></h1>
+                <p>Innovation in motion. Join us on the journey.</p>
+            </div>
+
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <label>Days</label>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <label>Hours</label>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <label>Minutes</label>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <label>Seconds</label>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
+    </section>
 
-        <footer>
-            <p>© 2025 | All Rights Reserved</p>
-        </footer>
-    </main>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Redefining <span class="highlight">Possibility</span></h2>
+            </div>
+            <div class="about-content reveal">
+                <p>
+                    At Naqmo, we aren't just building machines; we are crafting the next generation of intelligent
+                    companions.
+                    Our mission is to bridge the gap between biological potential and technological precision.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>10x</h3>
+                        <p>More Efficient</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>AI</h3>
+                        <p>Neural Core</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Autonomy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Core <span class="highlight">Capabilities</span></h2>
+                <p>Engineered for versatility. Designed for life.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="icon-box"><i class="fas fa-brain"></i></div>
+                    <h3>Adaptive Learning</h3>
+                    <p>Powered by our proprietary Neural Core™, Naqmo evolves with every interaction, learning your
+                        preferences and environment in real-time.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                    <h3>Kinetic Efficiency</h3>
+                    <p>Next-gen actuators provide fluid, human-like motion with minimal energy consumption, allowing for
+                        all-day operational cycles.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data never leaves the device. All processing is done locally on our encrypted
+                        quantum-resistant chipset.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon-box"><i class="fas fa-link"></i></div>
+                    <h3>Swarm Connectivity</h3>
+                    <p>Seamlessly integrates with other smart devices and Naqmo units to create a synchronized ecosystem
+                        of assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Robot Showcase -->
+    <section id="robot" class="section robot-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Meet the <span class="highlight">Prototype</span></h2>
+                <p>Precision Engineering. Adaptive Intelligence.</p>
+            </div>
+
+            <!-- Window frame that will "look through" to the background video conceptually, 
+                 but visually we rely on the global video transforming. 
+                 Or we can keep this empty/transparent to show the background video behind it. -->
+            <div class="robot-window-placeholder reveal">
+                <!-- The global video will interactively move to 'fit' this space visually or stylistically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>The <span class="highlight">Visionaries</span></h2>
+                <p>The minds behind the machine.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="avatar">SA</div>
+                    <h3>Sarah Al-Fayed</h3>
+                    <span class="role">Founder & CEO</span>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">JD</div>
+                    <h3>James Davidson</h3>
+                    <span class="role">Chief Robotics Officer</span>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">MK</div>
+                    <h3>Mei Kurosawa</h3>
+                    <span class="role">Head of AI</span>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">LR</div>
+                    <h3>Liam Ross</h3>
+                    <span class="role">Design Lead</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Newsletter -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="newsletter reveal">
+                <h2>Stay Updated</h2>
+                <p>Be the first to know when we launch.</p>
+                <form id="notify-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Notify Me</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">NAQMO</div>
+                <p>Building the future of intelligent companionship.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+                <div class="social-links-small">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Naqmo Inc. All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
